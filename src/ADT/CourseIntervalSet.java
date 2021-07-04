@@ -15,7 +15,7 @@ public class CourseIntervalSet {
 	public CourseIntervalSet() {	
 		
 		this.set =new MultiIntervalSet<Course>();
-		//this.set =new OverlapDec<Course>(new MultiIntervalSet<Course>());
+		this.set =new OverlapDec<Course>(new MultiIntervalSet<Course>());
 	}
 	
 	public boolean insert(long start, long end, Course label) {

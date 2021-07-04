@@ -18,7 +18,7 @@ public class DutyIntervalSet {
 	public DutyIntervalSet() {
 		
 		set=new CommonIntervalSet<Employee>();
-		//set=new MultiIntervalSet<Employee>();	
+		set=new MultiIntervalSet<Employee>();	
 	}
 	
 	public boolean insert(long start, long end, Employee label) {
@@ -27,13 +27,13 @@ public class DutyIntervalSet {
 		 start/=aday;
 		 end-=periods.getstart();
 		 end/=aday;
-		 System.out.println("ÕıÔÚÊäÈëµÄ£º"+start+" "+end+" "+label.toString());
+		 System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä£ï¿½"+start+" "+end+" "+label.toString());
 		 set.insert(start, end, label);
 		 APIs<Employee> api=new APIs<Employee>();
 		 if(api.calcFreeTimeRatio(set)==0.0) return true;
 		 else {
-			 System.out.println("¼ì²âµ½»¹ÓĞ¿Õ°×ÇøÓò");
-			 System.out.println("Çë¼ÌĞøÌí¼ÓÊäÈë£¡");
+			 System.out.println("ï¿½ï¿½âµ½ï¿½ï¿½ï¿½Ğ¿Õ°ï¿½ï¿½ï¿½ï¿½ï¿½");
+			 System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë£¡");
 		 }
 		 return false;
 	}
